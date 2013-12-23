@@ -1,5 +1,7 @@
 # django-storage-swift: a storage layer for OpenStack Swift
 
+**This is the major feature branch, as maintained by DigiACTive. It has diverged considerably from the original project.**
+
 django-storage-swift allows Django applications to use OpenStack Swift as a file storage layer.
 
 ## Features
@@ -12,11 +14,17 @@ django-storage-swift allows Django applications to use OpenStack Swift as a file
 
 ## Installing
 
-To get started with django-storage-swift, install it through pip, then in your ```settings.py``` file, add:
+To get started with django-storage-swift, install it:
 
-```python
-DEFAULT_FILE_STORAGE='swift.storage.SwiftStorage'
-```
++  This version is not on PyPI, so you need to: ```pip install git+git://github.com/DigiACTive/django-storage-swift.git@digiactive#egg=django-storage-swift```
+
+    Be careful with subsequent uses of ```pip freeze```, as it will just print the package name and lose the git stanza - you'll need to manually edit any `requirements.txt` files.
+    
++ In your ```settings.py``` file, add:
+
+    ```python
+    DEFAULT_FILE_STORAGE='swift.storage.SwiftStorage'
+    ```
 
 ## Configuring
 
